@@ -440,7 +440,15 @@ namespace Barotrauma
 
         public static bool InventoryKeyHit(int index)
         {
-            if (index == -1) return false;
+            if (index == -1) {
+                //<MODDED>
+                BAcc.Say("Inventory slots below 0 don't exist. How did you reques that?", true);
+                //</MODDED>
+                return false;
+            }
+            //<MODDED>
+            BAcc.Say("Slot " + index + " selected.", true);
+            //</MODDED>
             return AllowInput && GameSettings.CurrentConfig.InventoryKeyMap.Bindings[index].IsHit();
         }
 

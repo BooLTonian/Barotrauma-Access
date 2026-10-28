@@ -332,7 +332,9 @@ namespace Barotrauma
         }
 
         private readonly List<Item> previousInteractablesInRange = new();
-        private readonly List<Item> interactablesInRange = new();
+        // <MODDED>
+        public readonly List<Item> interactablesInRange = new();
+        // </MODDED>
         
         private bool wasFiring;
 

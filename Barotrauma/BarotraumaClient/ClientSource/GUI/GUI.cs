@@ -739,7 +739,9 @@ namespace Barotrauma
         }
 
         #region Update list
-        private static readonly List<GUIComponent> updateList = new List<GUIComponent>();
+        // <MODDED>
+        public static readonly List<GUIComponent> updateList = new List<GUIComponent>();
+        // </MODDED>
         //essentially a copy of the update list, used as an optimization to quickly check if the component is present in the update list
         private static readonly HashSet<GUIComponent> updateListSet = new HashSet<GUIComponent>();
         private static readonly Queue<GUIComponent> removals = new Queue<GUIComponent>();
